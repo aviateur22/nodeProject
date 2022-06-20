@@ -10,3 +10,5 @@
 ## sqitch
 
 sqitch init mistyclic --engine=pg --top-dir=./migrations
+sqitch target add target__name db:pg://user:password@server:ports/database_name
+sqitch add createdb -n "create database"
