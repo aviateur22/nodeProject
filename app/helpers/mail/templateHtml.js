@@ -8,20 +8,10 @@ module.exports =  async(emailType)=>{
 
     switch (emailType){
     /** message  */
-    case 'message': 
-        template = await fileReader('app/statics/templateHtml/message.html');
+    case 'inscription': 
+        template = await fileReader('app/statics/templateHtml/inscription.html');
         return template;
-
-    /** devis */
-    case 'quotation':
-        template = await fileReader('app/statics/templateHtml/quotation.html');
-        return template;
-
-    /** rendez-vous */
-    case 'appointment':
-        template = await fileReader('app/statics/templateHtml/appointment.html');
-        return template;
-        
+            
     default:
         throw ({
             message: 'impossible de procéder à l\'envoie de l\'email',
